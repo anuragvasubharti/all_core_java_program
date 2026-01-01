@@ -1,0 +1,200 @@
+package com.all.core.java.sorting;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Logger;
+
+// Java program to print all permutations of a 
+// given string. 
+public class PermutationName {
+
+	private static final Logger logger = Logger.getLogger(PermutationName.class.getName());
+
+	static int count = 0;
+	static int breakLoop = 0;
+
+	public static void main(String[] args) {
+
+		try {
+			// Assume default encoding.
+			FileWriter fileWriter = new FileWriter("D:\\workspaceKepler\\EmailReader\\src\\testout.txt");
+			// Always wrap FileWriter in BufferedWriter.
+			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+			String str = "hree";
+			int n = str.length();
+			PermutationName permutation = new PermutationName();
+			System.out.println("Start");
+			permutation.permute(str, 0, n - 1, bufferedWriter);
+			bufferedWriter.close();
+			// System.out.println("");
+			System.out.println("Total Count " + count);
+
+		} catch (IOException ioe) {
+		}
+	}
+
+	/**
+	 * permutation function
+	 * 
+	 * @param str string to calculate permutation for
+	 * @param l   starting index
+	 * @param r   end index
+	 */
+	private void permute(String str, int l, int r, BufferedWriter bufferedWriter) {
+
+		try {
+			if (l == r) {
+				// count++;
+				breakLoop++;
+				// System.out.print(str + " ");
+				if (str.startsWith("t")) {
+					// System.out.print(str + " ");
+					if ('a' == str.charAt(1)) {
+						// System.out.print(str + " ");
+						// bufferedWriter.write(str);
+						// bufferedWriter.newLine();
+						// count++;
+						if ('n' == str.charAt(2)) {
+							// System.out.print(str + " ");
+							// bufferedWriter.write(str);
+							// bufferedWriter.newLine();
+							// count++;
+							if ('u' == str.charAt(3)) {
+								// System.out.print(str + " ");
+								// bufferedWriter.write(str);
+								// bufferedWriter.newLine();
+								// count++;
+								if ('s' == str.charAt(4)) {
+									// System.out.print(str + " ");
+									// bufferedWriter.write(str);
+									// bufferedWriter.newLine();
+									// count++;
+									if ('h' == str.charAt(5)) {
+										// System.out.print(str + " ");
+										// bufferedWriter.write(str);
+										// bufferedWriter.newLine();
+										// count++;
+										if ('r' == str.charAt(6)) {
+											// System.out.print(str + " ");
+											// bufferedWriter.write(str);
+											// bufferedWriter.newLine();
+											// count++;
+											if ('e' == str.charAt(7)) {
+												// System.out.print(str + " ");
+												// bufferedWriter.write(str);
+												// bufferedWriter.newLine();
+												// count++;
+												if ('e' == str.charAt(8)) {
+													// System.out.print(str + " ");
+													// bufferedWriter.write(str);
+													// bufferedWriter.newLine();
+													// count++;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				if (str.startsWith("t")) {
+					if (// 'a' == str.charAt(1)
+						// ||
+						// 'n' == str.charAt(2)
+						// ||
+						// 'u' == str.charAt(3)
+						// ||
+						// 's' == str.charAt(4)
+						// ||
+						// 'h' == str.charAt(5)
+						// ||
+						// 'r' == str.charAt(6)
+						// ||
+						// 'e' == str.charAt(7)
+						// ||
+					'e' == str.charAt(8)) {
+						// System.out.print(str + " ");
+						// bufferedWriter.write(str);
+						// bufferedWriter.newLine();
+						// count++;
+					}
+				}
+
+				if (str.startsWith("t") || str.startsWith("ta") || str.startsWith("tn") || str.startsWith("tu")
+						|| str.startsWith("ts") || str.startsWith("th") || str.startsWith("tr")
+						|| str.startsWith("te")) {
+					// System.out.print(str + " ");
+				}
+
+				if (str.startsWith("a") || str.startsWith("an") || str.startsWith("au") || str.startsWith("as")
+						|| str.startsWith("ah") || str.startsWith("ar") || str.startsWith("ae")) {
+					System.out.print(str + " ");
+				}
+				if (str.startsWith("n") || str.startsWith("nu") || str.startsWith("ns") || str.startsWith("nh")
+						|| str.startsWith("nr") || str.startsWith("ne")) {
+					// System.out.print(str + " ");
+				}
+				if (str.startsWith("u") || str.startsWith("us") || str.startsWith("uh") || str.startsWith("ur")
+						|| str.startsWith("ue")) {
+					// System.out.print(str + " ");
+				}
+				if (str.startsWith("s") || str.startsWith("sh") || str.startsWith("sr") || str.startsWith("se")) {
+					// System.out.print(str + " ");
+				}
+				if ((str.startsWith("h") && 'h' == str.charAt(0)) || (str.startsWith("h") && 'r' == str.charAt(1))
+						|| (str.startsWith("h") && 'e' == str.charAt(2))
+						|| (str.startsWith("h") && 'e' == str.charAt(3))
+				// || str.startsWith("he")
+				) {
+					System.out.print(str + " ");
+				}
+				if (str.startsWith("re")) {
+					// System.out.print(str + " ");
+				}
+				/*
+				 * if (str.startsWith("re") || str.startsWith("hr") || str.startsWith("he") ||
+				 * str.startsWith("sh") || str.startsWith("sr") || str.startsWith("se") ||
+				 * str.startsWith("us") || str.startsWith("uh") || str.startsWith("ur") ||
+				 * str.startsWith("ue") || str.startsWith("nu") || str.startsWith("ns") ||
+				 * str.startsWith("nh") || str.startsWith("nr") || str.startsWith("ne") ||
+				 * str.startsWith("an") || str.startsWith("au") || str.startsWith("as") ||
+				 * str.startsWith("ah") || str.startsWith("ar") || str.startsWith("ae") ||
+				 * str.startsWith("ta") || str.startsWith("tn") || str.startsWith("tu") ||
+				 * str.startsWith("ts") || str.startsWith("th") || str.startsWith("tr") ||
+				 * str.startsWith("te")) { System.out.print(str + " "); }
+				 */
+				if (breakLoop == 13) {
+					System.out.println();
+					breakLoop = 0;
+				}
+			} else {
+				for (int i = l; i <= r; i++) {
+					str = swap(str, l, i);
+					permute(str, l + 1, r, bufferedWriter);
+					str = swap(str, l, i);
+				}
+			}
+		} catch (Exception e) {
+		}
+	}
+
+	/**
+	 * Swap Characters at position
+	 * 
+	 * @param a string value
+	 * @param i position 1
+	 * @param j position 2
+	 * @return swapped string
+	 */
+	public String swap(String a, int i, int j) {
+
+		char temp;
+		char[] charArray = a.toCharArray();
+		temp = charArray[i];
+		charArray[i] = charArray[j];
+		charArray[j] = temp;
+		return String.valueOf(charArray);
+	}
+}

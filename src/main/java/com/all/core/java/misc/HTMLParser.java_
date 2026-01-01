@@ -1,0 +1,134 @@
+package com.all.core.java.misc;
+
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+/**
+ * Java Program to parse/read HTML documents from File using Jsoup library.
+ * Jsoup is an open source library which allows Java developer to parse HTML
+ * files and extract elements, manipulate data, change style using DOM, CSS and
+ * JQuery like method.
+ *
+ * @author Javin Paul
+ */
+public class HTMLParser {
+	public static void main(String args[]) {
+		HTMLParser();
+		//HTMLParser(url);
+	}
+	public static void HTMLParser(){
+	//public static void HTMLParser(String url) {
+		//System.out.println(url);
+        // Parse HTML String using JSoup library
+        //String HTMLSTring = "https://www.truecaller.com/search/in/7658910100";
+        String HTMLSTring = "<DOCTYPE html>"
+                + "<html>"
+                + "<head>"
+                + "<title>JSoup Example</title>"
+                + "</head>"
+                + "<body>"
+                + "<table><tr><td><h1>HelloWorld</h1></tr>"
+                + "</table>"
+                + "</body>"
+                + "</html>";
+
+        Document html = Jsoup.parse(HTMLSTring);
+        String title = html.title();
+        String h1 = html.body().getElementsByTag("h1").text();
+
+        System.out.println("Input HTML String to JSoup :" + HTMLSTring);
+        System.out.println("After parsing, Title : " + title);
+        System.out.println("Afte parsing, Heading : " + h1);
+
+        // JSoup Example 2 - Reading HTML page from URL
+        //Document doc = Jsoup.parse(url);;
+        //String title = doc.title();
+        //String h1 = doc.body().getElementsByTag("h1").text();
+
+        try {
+            //doc = Jsoup.connect("http://google.com/").get();
+        	Document doc = Jsoup.connect("https://smallpdf.com/unlock-pdf").get();
+        	/*//System.out.println("01 " + doc.baseUri());
+        	//System.out.println("02 " + doc.childNodeSize());
+        	//System.out.println("03 " + doc.className());
+        	//System.out.println("04 " + doc.cssSelector());
+        	//System.out.println("05 " + doc.data());
+        	//System.out.println("06 " + doc.elementSiblingIndex());
+        			System.out.println("07 " + doc.html());
+        	//System.out.println("08 " + doc.id());
+        	//System.out.println("09 " + doc.location());
+        	//System.out.println("10 " + doc.nodeName());
+        			System.out.println("11 " + doc.outerHtml());
+        	//System.out.println("12 " + doc.ownText());
+        	//System.out.println("13 " + doc.siblingIndex());
+        	//System.out.println("14 " + doc.tagName());
+        			System.out.println("15 " + doc.text() +"");
+        			System.out.println("16 " + doc.title());
+        	//System.out.println("17 " + doc.val());
+        			System.out.println("18 " + doc.wholeText() + "");
+        	//System.out.println("19 " + doc.attributes());
+        			System.out.println("20 " + doc.body());
+        	//System.out.println("21 " + doc.charset());
+        			System.out.println("22 " + doc.childNodes());
+        			System.out.println("23 " + doc.childNodesCopy());
+        			System.out.println("24 " + doc.children());
+        	//System.out.println("25 " + doc.classNames());
+        			System.out.println("26 " + doc.clearAttributes());
+        	//System.out.println("27 " + doc.dataNodes());
+        	//System.out.println("28 " + doc.dataset());
+        	//System.out.println("29 " + doc.empty());
+        	//System.out.println("30 " + doc.getAllElements());
+        	//System.out.println("31 " + doc.getClass());
+        	//System.out.println("32 " + doc.hasParent());
+        	//System.out.println("33 " + doc.hasText());
+        	//System.out.println("34 " + doc.head());
+        	//System.out.println("35 " + doc.lastElementSibling());
+        	//System.out.println("36 " + doc.nextElementSibling());
+        	//System.out.println("37 " + doc.nextSibling());
+        			System.out.println("38 " + doc.normalise());
+        	//System.out.println("39 " + doc.outputSettings());
+        			System.out.println("40 " + doc.ownerDocument());
+        	//System.out.println("41 " + doc.parent());
+        	//System.out.println("42 " + doc.parentNode());
+        	//System.out.println("43 " + doc.parents());
+        	//System.out.println("44 " + doc.previousElementSibling());
+        	//System.out.println("45 " + doc.previousSibling());
+        	//System.out.println("46 " + doc.quirksMode());
+        			System.out.println("47 " + doc.root());
+        	//System.out.println("48 " + doc.shallowClone());
+        	//System.out.println("49 " + doc.siblingElements());
+        	//System.out.println("50 " + doc.siblingNodes());
+        	//System.out.println("51 " + doc.tag());
+        	//System.out.println("52 " + doc.textNodes());
+        	//System.out.println("53 " + doc.unwrap());
+        	//doc.remove();*/
+        	title = doc.title();
+        	System.out.println("title >>>>>> " + title);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Jsoup Can read HTML page from URL, title : ");
+        //System.out.println("Jsoup Can read HTML page from URL, title : " + title);
+
+        // JSoup Example 3 - Parsing an HTML file in Java
+        Document htmlFile = Jsoup.parse("https://www.truecaller.com/search/in/7658910100.html", "ISO-8859-1"); // wrong
+        //Document htmlFile = null;
+        try {
+           // htmlFile = Jsoup.parse(new File("https://www.truecaller.com/search/in/7658910100/076589 10100 _ +917658910100 _�Truecaller.html"), "ISO-8859-1");
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } // right
+        //title = htmlFile.title();
+        System.out.println("title: >>>>>>> " + title);
+        Element div = htmlFile.getElementById(" ");
+        //String cssClass = div.className(); // getting class form HTML element
+
+        System.out.println("Jsoup can also parse HTML file directly");
+        //System.out.println("title : " + title);
+        //System.out.println("class of div tag : " + cssClass);
+
+	}
+}

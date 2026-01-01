@@ -1,0 +1,202 @@
+package com.all.core.java.sorting;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.util.HashSet;
+import java.util.logging.Logger;
+
+// Java program to print all permutations of a given string.
+public class Permutation {
+
+	private static final Logger logger = Logger.getLogger(Permutation.class.getName());
+
+	int count = 0;
+	String fileNameOut = "D:\\workspace\\Java1.8Example\\src\\OutputEmail2.txt";
+	HashSet<String> aList = new HashSet<String>();
+
+	public static void main(String[] args) {
+		// String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		// String str = "abcdefghijklmnopqrstuvwxyz";
+		// String str = "toonplea";
+
+		String[] strA = { "tanushree" };
+		// String[] strA = {"anushree"};
+		// String[] strA = {"tnushree"};
+		// String[] strA = {"taushree"};
+		// String[] strA = {"tanshree"};
+		// String[] strA = {"tanuhree"};
+		// String[] strA = {"tanushee"};
+		// String[] strA = {"tanushre"};
+
+		// String[] strA = {"t","a","n","u","s","h","r","e","e"};
+
+		/*
+		 * String[] strA =
+		 * {"aoon","boon","coon","doon","eoon","foon","goon","hoon","ioon","joon",
+		 * "koon","loon","moon","noon","ooon","poon","qoon","roon","soon","toon",
+		 * "uoon","voon","woon","xoon","yoon","zoon"};
+		 */
+
+		/*
+		 * String[] strA =
+		 * {"taon","tbon","tcon","tdon","teon","tfon","tgon","hoon","tion","tjon",
+		 * "tkon","tlon","tmon","tnon","toon","tpon","tqon","tron","tson","tton",
+		 * "tuon","tvon","twon","txon","tyon","tzon"};
+		 */
+
+		/*
+		 * String[] strA =
+		 * {"toan","tobn","tocn","todn","toen","tofn","togn","tohn","toin","tojn",
+		 * "tokn","toln","tomn","tonn","toon","topn","toqn","torn","tosn","totn",
+		 * "toun","tovn","town","toxn","toyn","tozn"};
+		 */
+
+		/*
+		 * String[] strA =
+		 * {"tooa","toob","tooc","tood","tooe","toof","toog","tooh","tooi","tooj",
+		 * "took","tool","toom","toon","tooo","toop","tooq","toor","toos","toot",
+		 * "toou","toov","toow","toox","tooy","tooz"};
+		 */
+
+		// ====
+
+		/*
+		 * String[] strA =
+		 * {"alea","blea","clea","dlea","elea","flea","glea","hlea","ilea","jlea",
+		 * "klea","llea","mlea","nlea","olea","plea","qlea","rlea","slea","tlea",
+		 * "ulea","vlea","wlea","xlea","ylea","zlea"};
+		 */
+
+		/*
+		 * String[] strA =
+		 * {"paea","pbea","pcea","pdea","peea","pfea","pgea","phea","piea","pjea",
+		 * "pkea","plea","pmea","pnea","poea","ppea","pqea","prea","psea","ptea",
+		 * "puea","pvea","pwea","pxea","pyea","pzea"};
+		 */
+
+		/*
+		 * String[] strA =
+		 * {"plaa","plba","plca","plda","plea","plfa","plga","plha","plia","plja",
+		 * "plka","plla","plma","plna","ploa","plpa","plqa","plra","plsa","plta",
+		 * "plua","plva","plwa","plxa","plya","plza"};
+		 */
+
+		/*
+		 * String[] strA =
+		 * {"plea","pleb","plec","pled","plee","plef","pleg","pleh","plei","plej",
+		 * "plek","plel","plem","plen","pleo","plep","pleq","pler","ples","plet",
+		 * "pleu","plev","plew","plex","pley","plez"};
+		 */
+
+		/*
+		 * String[] strA = {"Sanjukta", "Dash", "Jhilu", "25", "01", "1983", "07", "07",
+		 * "1983", "83", "sanjukta", "dash", "jhilu", "sanju", "das", "Pega", "pega",
+		 * "Anurag", "Bharti", "Vasu", "16", "07", "1983", "83", "anurag", "bharti",
+		 * "vasu", "Anu", "anu", "Motu", "motu", "@", "#", "$", "%"};
+		 */
+
+		// --------------------------------------------------------------------------------------
+
+		/*
+		 * String[] strA = {"ait","bit","cit","dit","eit","fit","git","hit","iit","jit",
+		 * "kit","lit","mit","nit","oit","pit","qit","rit","sit","tit",
+		 * "uit","vit","wit","xit","yit","zit"};
+		 */
+
+		/*
+		 * String[] strA = {"hat","hbt","hct","hdt","het","hft","hgt","hht","hit","hjt",
+		 * "hkt","hlt","hmt","hnt","hot","hpt","hqt","hrt","hst","htt",
+		 * "hut","hvt","hwt","hxt","hyt","hzt"};
+		 */
+
+		/*
+		 * String[] strA = {"hia","hib","hic","hid","hie","hif","hig","hih","hii","hij",
+		 * "hik","hil","him","hin","hio","hip","hiq","hir","his","hit",
+		 * "hiu","hiv","hiw","hix","hiy","hiz"};
+		 */
+
+		// ====
+		/*
+		 * String[] strA = {"aog","bog","cog","dog","eog","fog","gog","hog","iog","jog",
+		 * "kog","log","mog","nog","oog","pog","qog","rog","sog","tog",
+		 * "uog","vog","wog","xog","yog","zog"};
+		 */
+
+		/*
+		 * String[] strA = {"cag","cbg","ccg","cdg","ceg","cfg","cgg","chg","cig","cjg",
+		 * "ckg","clg","cmg","cng","cog","cpg","cqg","crg","csg","ctg",
+		 * "cug","cvg","cwg","cxg","cyg","czg"};
+		 */
+
+		/*
+		 * String[] strA = {"coa","cob","coc","cod","coe","cof","cog","coh","coi","coj",
+		 * "cok","col","com","con","coo","cop","coq","cor","cos","cot",
+		 * "cou","cov","cow","cox","coy","coz"};
+		 */
+
+		for (String str : strA) {
+			int n = str.length();
+			Permutation permutation = new Permutation();
+			permutation.permute(str, 0, n - 1);
+		}
+	}
+
+	/**
+	 * permutation function
+	 * 
+	 * @param str string to calculate permutation for
+	 * @param l   starting index
+	 * @param r   end index
+	 */
+	private void permute(String str, int startingIndex, int endIndex) {
+		try {
+
+			// Assume default encoding.
+			FileWriter fileWriter = new FileWriter(fileNameOut);
+			// Always wrap FileWriter in BufferedWriter.
+			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+			String str2 = str;
+			aList.add(str2);
+			// --------aList.add(str2.substring(0,3));
+			System.out.println(str2.substring(0, 8));
+			if (startingIndex == endIndex) {
+				// System.out.println(str.substring(0,4));
+				// System.out.println("if " + str);
+				// System.out.println(str);
+			} else {
+				for (int i = startingIndex; i <= endIndex; i++) {
+					str = swap(str, startingIndex, i);
+					permute(str, startingIndex + 1, endIndex);
+					str = swap(str, startingIndex, i);
+				}
+			}
+			for (String str1 : aList) {
+				bufferedWriter.write(str1);
+				bufferedWriter.newLine();
+			}
+			// Always close files.
+			bufferedWriter.close();
+			// System.out.println("count "+count++);
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+	}
+
+	/**
+	 * Swap Characters at position
+	 * 
+	 * @param a string value
+	 * @param i position 1
+	 * @param j position 2
+	 * @return swapped string
+	 */
+	public String swap(String a, int i, int j) {
+		char temp;
+		char[] charArray = a.toCharArray();
+		temp = charArray[i];
+		charArray[i] = charArray[j];
+		charArray[j] = temp;
+		return String.valueOf(charArray);
+	}
+}

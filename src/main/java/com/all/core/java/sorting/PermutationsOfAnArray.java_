@@ -1,0 +1,79 @@
+package com.all.core.java.sorting;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.logging.Logger;
+
+public class PermutationsOfAnArray {
+
+	private static final Logger logger = Logger.getLogger(PermutationsOfAnArray.class.getName());
+
+	static String number1 = null;
+	public static int count = 0;
+
+	public static void main(String[] args) {
+		// permute(new int[]{1,2,3,4});
+
+		permute(new String[] { "T", "A", "N", "U", "S", "H", "R", "E", "E" });
+		// permute(new String[]{"1","2","3","4","5","6","7","8","9","0"});
+		// permute(new String[]{"A1 - Anurag's Mind","B1 - Anurag's Heart","C1 -
+		// Choto","A2 - Sanjukta's Mind","B2 - Sanjukta's Heart","C2 - Choti"});
+		// permute(new
+		// String[]{"#","$","%","@","0","1","2","3","5","6","7","8","9","a","b","d","e","f","g","h","i","j","k","l","m","n","p","r","s","t","u","v","y"});
+
+		/*
+		 * permute(new String[]{"Sanjukta", "Dash", "Jhilu", "25", "01", "1983", "07",
+		 * "07", "1983", "83", "sanjukta", "dash", "jhilu", "sanju", "das", "Pega",
+		 * "pega", "Anurag", "Bharti", "Vasu", "16", "07", "1983", "83", "anurag",
+		 * "bharti", "vasu", "Anu", "anu", "Motu", "motu", "@", "#", "$", "%"});
+		 */
+	}
+
+	// public static void permute(int[] arr){
+	public static void permute(String[] arr) {
+		// permuteHelper(arr, 0);
+		permuteHelper(arr, 0);
+	}
+
+	static Set<String> number = new HashSet<String>();
+
+	// private static void permuteHelper(int[] arr, int index){
+	private static void permuteHelper(String[] arr, int index) {
+		if (index >= arr.length - 1) { // If we are at the last element - nothing left to permute
+
+			System.out.println(" index " + index + " arr.length1 " + arr.length);
+			// System.out.println(Arrays.toString(arr));
+			// Print the array
+			// System.out.print("[");
+			for (int i = 0; i < arr.length - 1; i++) {
+
+				// System.out.println("arr.length2 " + arr.length);
+				// System.out.println(arr[i] + "\n");
+				// System.out.print(arr[i]);
+				// String number1 = arr[i];
+				number.add(arr[i]);
+				// break;
+			}
+			if (arr.length > 0)
+				System.out.print(arr[arr.length - 1]);
+			// System.out.println("]");
+			return;
+		}
+		for (int i = index; i < arr.length; i++) { // For each index in the sub array arr[index...end]
+			// Swap the elements at indices index and i
+			// int t = arr[index];
+			String t = arr[index];
+			arr[index] = arr[i];
+			arr[i] = t;
+			// Recurse on the sub array arr[index+1...end]
+			// System.out.println("arr " + arr[i] + " index+1 " + index+1);
+			permuteHelper(arr, index + 1);
+			// Swap the elements back
+			t = arr[index];
+			arr[index] = arr[i];
+			arr[i] = t;
+		}
+		count++;
+		// System.out.println("count " + count);
+	}
+}
