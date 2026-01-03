@@ -12,8 +12,8 @@ public class ListCombiner {
 
 	public static void main(String[] args) {
 
-		String file1 = "E:\\Project-Sakshi\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program\\ListCombiner1";
-		String file2 = "E:\\Project-Sakshi\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program\\ListCombiner2";
+		String file1 = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\ListCombiner1";
+		String file2 = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\ListCombiner2";
 
 		try {
 			// Read all lines from both files into lists

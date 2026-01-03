@@ -44,7 +44,7 @@ public class TestingSelenium {
 			Thread.sleep(3000);
 			// ---------------- READ FILE ----------------
 			TreeSet<String> links = new TreeSet<>();
-			String fileName = "D:\\workspaceKepler\\EmailReader\\src\\InputEmail1.txt";
+			String fileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\InputEmail1.txt";
 			try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 				String name;
 				while ((name = br.readLine()) != null) {

@@ -10,7 +10,7 @@ public class DirectoryReader {
 	public static void main(String[] args) {
 
 		// Replace this with the directory path you want to read
-		String directoryPath = "E:\\Project-Sakshi\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program\\Cloud-DevOps-Doc";
+		String directoryPath = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Cloud-DevOps-Doc";
 
 		// Create a File object representing the directory
 		File directory = new File(directoryPath);

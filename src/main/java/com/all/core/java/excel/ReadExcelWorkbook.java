@@ -23,7 +23,7 @@ public class ReadExcelWorkbook {
 		FileOutputStream fileOut = null;
 		XSSFWorkbook wb = null;
 		try {
-			fileIn = new FileInputStream("C:\\Users\\Anurag\\Desktop\\New folder\\Book1 - No.xlsx");
+			fileIn = new FileInputStream("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Book1 - No.xlsx");
 			POIFSFileSystem fs = new POIFSFileSystem(fileIn);
 			wb = new XSSFWorkbook(fs.toString());
 			XSSFSheet sheet = wb.getSheetAt(0);

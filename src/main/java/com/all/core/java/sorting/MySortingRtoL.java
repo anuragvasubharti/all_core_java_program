@@ -22,14 +22,14 @@ public class MySortingRtoL {
 			String readingLine = null;
 			StringBuffer stringBuffer = null;
 
-			String fileName = "D:\\workspaceKepler\\EmailReader\\src\\InputEmail1.txt";
+			String fileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\InputEmail1.txt";
 			// FileReader reads text files in the default encoding.
 			FileReader fileReader = new FileReader(fileName);
 
 			// Always wrap FileReader in BufferedReader.
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-			String fileNameOut = "D:\\workspaceKepler\\EmailReader\\src\\OutputEmail2.txt";
+			String fileNameOut = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail2.txt";
 			// Assume default encoding.
 			FileWriter fileWriter = new FileWriter(fileNameOut);
 

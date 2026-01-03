@@ -12,7 +12,7 @@ public class PdfReadExample {
 
 	private static final Logger logger = Logger.getLogger(PdfReadExample.class.getName());
 
-	private static final String FILE_PATH = "C:\\Users\\Anurag\\Downloads\\fwform16andsalarycertificateforthefy201718\\Infosys_F16_00687656_2017.PDF";
+	private static final String FILE_PATH = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Infosys_F16_00687656_2017.PDF";
 
 	public static void main(String[] args) {
 

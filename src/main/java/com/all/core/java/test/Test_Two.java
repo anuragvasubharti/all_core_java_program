@@ -32,11 +32,11 @@ public class Test_Two implements Comparable<String> {
 	public static void main(String args[]) {
 
 		// The name of the file to open.
-		String fileName = "D:\\workspaceKepler\\CoreJavaPoject\\src\\InputEmail.txt";
+		String fileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\InputEmail.txt";
 		// String fileName = "C:\\Users\\Anurag\\Desktop\\ALL13022018.xlsx";
 
 		// The name of the file to write.
-		String fileNameOut = "D:\\workspaceKepler\\CoreJavaPoject\\src\\OutputEmail.txt";
+		String fileNameOut = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail.txt";
 
 		// This will reference one line at a time
 		String inputEmail = null;

@@ -19,8 +19,8 @@ public class ReadAndWriteTest {
 	static int totalInvalid = 0;
 
 	public static void main(String[] args) {
-		String inputFile = "D:\\workspace\\CoreJavaPoject\\src\\InputEmail2.txt";
-		String outputFile = "D:\\workspace\\CoreJavaPoject\\src\\OutputEmail2.txt";
+		String inputFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\InputEmail2.txt";
+		String outputFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail2.txt";
 		// TreeSet = sorted + unique
 		Set<String> uniqueEmails = new TreeSet<>();
 		// ✅ Try-with-resources (NO leaks)

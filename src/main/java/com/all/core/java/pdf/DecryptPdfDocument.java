@@ -15,8 +15,8 @@ public class DecryptPdfDocument {
 	private static final Logger logger = Logger.getLogger(DecryptPdfDocument.class.getName());
 
 	static String owner = "";
-	static String original = "C:\\Users\\Anurag\\Downloads\\Infosys_F16_00687656_2017.PDF";
-	static String destination = "C:\\Users\\Anurag\\Downloads\\Infosys_F16_00687656_2017_Decrypt.PDF";
+	static String original = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Infosys_F16_00687656_2017.PDF";
+	static String destination = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Infosys_F16_00687656_2017_Decrypt.PDF";
 
 	public static void main(String... args) throws IOException, DocumentException {
 

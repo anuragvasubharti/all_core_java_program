@@ -45,7 +45,7 @@ public class MXLookupExample {
 
 		try {
 
-			String fileName = "E:\\email-checker-java\\src\\main\\java\\com\\email\\verifier\\01-All-Company-ID.txt";
+			String fileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\01-All-Company-ID.txt";
 
 			// FileReader reads text files in the default encoding.
 			FileReader fileReader = new FileReader(fileName);
@@ -118,7 +118,7 @@ public class MXLookupExample {
 
 			bufferedReader.close();
 
-			String failEmailIDFile = "E:\\email-checker-java\\src\\main\\java\\com\\email\\verifier\\OutputFile1.txt";
+			String failEmailIDFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputFile1.txt";
 
 			// Assume default encoding.
 			FileWriter fileWriterFail = new FileWriter(failEmailIDFile);
@@ -133,7 +133,7 @@ public class MXLookupExample {
 				writeCountFail++;
 			}
 
-			String workingEmailIDFile = "E:\\email-checker-java\\src\\main\\java\\com\\email\\verifier\\OutputFile2.txt";
+			String workingEmailIDFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputFile2.txt";
 
 			// Assume default encoding.
 			FileWriter fileWriterWorking = new FileWriter(workingEmailIDFile);

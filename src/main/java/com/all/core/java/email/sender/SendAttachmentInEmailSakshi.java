@@ -52,7 +52,7 @@ public class SendAttachmentInEmailSakshi {
 	public static void main(String[] args) {
 
 		String to = null;
-		String fileName = "G:\\workspace-spring-tool-suite-4-4.24.0.RELEASE\\Email\\src\\email\\InputEmail2.txt";
+		String fileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\InputEmail2.txt";
 		String line = null;
 
 		SortedSetMultimap<String, String> myTreeMultimapList = TreeMultimap.create();

@@ -19,7 +19,7 @@ public class ReadExcelDemo {
 		try {
 
 			FileInputStream file = new FileInputStream(
-					new File("C:\\Users\\Anurag\\Desktop\\New folder\\Book1 - Yes.xlsx"));
+					new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Book1 - Yes.xlsx"));
 			// Create Workbook instance holding reference to .xlsx file
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 			// Get first/desired sheet from the workbook

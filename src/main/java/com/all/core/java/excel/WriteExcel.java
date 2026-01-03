@@ -130,7 +130,7 @@ public class WriteExcel {
 	public static void main(String[] args) throws WriteException, IOException {
 
 		WriteExcel test = new WriteExcel();
-		test.setOutputFile("D:/workspace/CoreJavaPoject/Test.xls");
+		test.setOutputFile("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Test.xls");
 		test.write();
 		System.out.println("Please check the result file under C:/Users/Anurag/Desktop/New folder/lars.xls ");
 	}

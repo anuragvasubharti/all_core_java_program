@@ -18,7 +18,7 @@ public class WordDocumentGenerator {
 		DecimalFormat df = new DecimalFormat("000"); // Format: 001, 002, ..., 500
 		
 		// Change this to your desired output folder
-		String outputDir = "E:\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program"; 
+		String outputDir = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output"; 
 		for (int i = 1; i <= 500; i++) {
 			// Create document name
 			String fileName = "Job-Description-" + df.format(i) + ".docx";

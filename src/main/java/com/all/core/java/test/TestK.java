@@ -31,14 +31,14 @@ public class TestK {
 		// String fileName = "C:\\Users\\HOME\\Desktop\\Email\\OldMail.txt";
 		// String fileName = "C:\\Users\\HOME\\Desktop\\Email\\LinkedIn.txt";
 		// String fileName = "C:\\Users\\HOME\\Desktop\\Email\\LinkedInReverse.txt";
-		String fileName = "D:\\workspaceKepler\\CoreJavaPoject\\src\\InputEmail.txt";
+		String fileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\InputEmail.txt";
 		// String fileName = "C:\\Users\\Anurag\\Desktop\\ALL13022018.xlsx";
 		// The name of the file to write.
 		// String fileNameOut =
 		// "C:\\Users\\HOME\\Documents\\workspace-sts-3.7.2.RELEASE\\CoreJavaTest\\src\\FinalMailID.txt";
 		// String fileNameOut = "C:\\Users\\HOME\\Desktop\\Email\\LinkedInReverse.txt";
 		// String fileNameOut = "C:\\Users\\HOME\\Desktop\\Email\\LinkedInFinal.txt";
-		String fileNameOut = "D:\\workspaceKepler\\CoreJavaPoject\\src\\OutputEmail.txt";
+		String fileNameOut = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail.txt";
 		// The name of the file to open.
 		// String fileName2 = "C:\\Users\\Anurag\\Desktop\\TestYahoo\\FailMailID.txt";
 		// This will reference one line at a time

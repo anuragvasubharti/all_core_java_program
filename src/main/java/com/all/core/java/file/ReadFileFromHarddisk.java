@@ -21,7 +21,7 @@ public class ReadFileFromHarddisk {
 			TreeSet<String> fileThird = new TreeSet<String>();
 
 			FileReader fileReaderOne = new FileReader(
-					"C:\\Users\\Anurag\\Desktop\\Gem Source IT Consulting Pvt Ltd\\linkedin\\new60.txt");
+					"E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\new60.txt");
 			// FileReader fileReaderOne = new FileReader("C:\\Users\\Anurag\\Desktop\\Gem
 			// Source IT Consulting Pvt Ltd\\linkedin\\13212.txt");
 			BufferedReader bufferedReaderOne = new BufferedReader(fileReaderOne);

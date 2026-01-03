@@ -20,7 +20,7 @@ public class EmailVerifier_Two {
 	public static void main(String[] args) {
 		
 		// file with emails, one per line
-		String filePath = "E:\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program\\emails.txt"; 
+		String filePath = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\emails.txt"; 
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
 			String email;

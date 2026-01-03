@@ -18,7 +18,7 @@ public class NumberShuffling {
 		List<Integer> passwords = Arrays.asList(0, 0, 1, 1, 2, 3, 5, 6, 6, 7, 7, 8, 9, 9);
 		System.out.println("---> " + passwords.size());
 		;
-		String fileNameOut = "D:\\workspaceKepler\\EmailReader\\src\\OutputEmail1.txt";
+		String fileNameOut = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail1.txt";
 		Set<String> combinationsOfString = new TreeSet<String>();
 		// List<String> combinationsOfString = new ArrayList<String>();
 		try {

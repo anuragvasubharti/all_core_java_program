@@ -41,7 +41,7 @@ public class ReadFolderAndFiles {
 		// File maindir = new File(maindirpathE);
 		try {
 			// Instantiating the File class
-			File file = new File("C:\\Users\\Anurag\\Downloads\\NCERT\\ReadFileFolderName.txt");
+			File file = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\ReadFileFolderName.txt");
 			// Instantiating the PrintStream class
 			PrintStream stream = new PrintStream(file);
 			System.out.println("From now on " + file.getAbsolutePath() + " will be your console");

@@ -17,7 +17,7 @@ public class ExcelReader {
 
 	private static final Logger logger = Logger.getLogger(ExcelReader.class.getName());
 
-	public static final String SAMPLE_XLSX_FILE_PATH = "C:\\Users\\Anurag\\Desktop\\New folder\\Book1 - Yes.xlsx";
+	public static final String SAMPLE_XLSX_FILE_PATH = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Book1 - Yes.xlsx";
 
 	public static void main(String[] args) throws IOException, InvalidFormatException {
 

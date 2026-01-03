@@ -16,7 +16,7 @@ public class RemoveDuplicates {
 	public static void main(String[] args) {
 
 		// Read contents of file1
-		String fileNameOne = "E:\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program\\Yahoo-Fail-Mail-ID.txt";
+		String fileNameOne = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Yahoo-Fail-Mail-ID.txt";
 		String stringLineOne = null;
 		try {
 			// FileReader reads text files in the default encoding.
@@ -32,7 +32,7 @@ public class RemoveDuplicates {
 		}
 
 		// Read contents of file2
-		String fileNameTwo = "G:\\workspace-spring-tool-suite-4-4.24.0.RELEASE\\Email\\src\\email\\Yahoo-Sent-Mail-ID.txt";
+		String fileNameTwo = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Yahoo-Sent-Mail-ID.txt";
 		String stringLineTwo = null;
 		try {
 			// FileReader reads text files in the default encoding.
@@ -59,11 +59,11 @@ public class RemoveDuplicates {
 		uniqueSet2.removeAll(set1);
 
 		// Write the contents of uniqueSet1 to a new file
-		writeToFile("G:\\workspace-spring-tool-suite-4-4.24.0.RELEASE\\Email\\src\\email\\Yahoo-Fail-Mail-ID2.txt",
+		writeToFile("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Yahoo-Fail-Mail-ID2.txt",
 				uniqueSet1);
 
 		// Write the contents of uniqueSet2 to a new file
-		writeToFile("G:\\workspace-spring-tool-suite-4-4.24.0.RELEASE\\Email\\src\\email\\Yahoo-Sent-Mail-ID2.txt",
+		writeToFile("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Yahoo-Sent-Mail-ID2.txt",
 				uniqueSet2);
 	}
 

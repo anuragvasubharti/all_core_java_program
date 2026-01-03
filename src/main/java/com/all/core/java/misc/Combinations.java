@@ -39,7 +39,7 @@ public class Combinations {
 
 	int count = 0;
 	String strTest = null;
-	String fileNameOut = "D:\\workspaceKepler\\EmailReader\\src\\OutputEmail1.txt";
+	String fileNameOut = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail1.txt";
 	Set<String> combinationsOfString = new TreeSet<String>();
 	// List<String> combinationsOfString = new ArrayList<String>();
 

@@ -24,9 +24,9 @@ public class SMTPEmailValidatorTwo {
 
 	public static void main(String[] args) throws Exception {
 
-		String inputFile = "E:\\Project\\core_java_email_mailbox_checker\\emails.txt";
-		String validOutputFile = "E:\\Project\\core_java_email_mailbox_checker\\valid_emails.txt";
-		String invalidOutputFile = "E:\\Project\\core_java_email_mailbox_checker\\invalid_emails.txt";
+		String inputFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\emails.txt";
+		String validOutputFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\valid_emails.txt";
+		String invalidOutputFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\invalid_emails.txt";
 
 		List<String> validEmails = new ArrayList<>();
 		List<String> invalidEmails = new ArrayList<>();

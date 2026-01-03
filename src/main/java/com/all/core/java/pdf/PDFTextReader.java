@@ -31,8 +31,8 @@ public class PDFTextReader {
 
 	public static void main(String[] args) {
 
-		String pdfPath = "C:\\Users\\Anurag\\Documents\\Bluetooth Exchange Folder\\My_Statement_1 May, 2018_30 May, 2018_8074863953.pdf";
-		String txtPath = "C:\\Users\\Anurag\\Documents\\Bluetooth Exchange Folder\\My_Statement_1 May, 2018_30 May, 2018_8074863953.txt";
+		String pdfPath = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\My_Statement_1 May, 2018_30 May, 2018_8074863953.pdf";
+		String txtPath = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\My_Statement_1 May, 2018_30 May, 2018_8074863953.txt";
 		String content = pdfToText(pdfPath);
 		if (content == null) {
 			System.out.println("No text extracted.");

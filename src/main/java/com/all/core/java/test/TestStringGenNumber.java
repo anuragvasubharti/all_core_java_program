@@ -29,12 +29,12 @@ public class TestStringGenNumber {
 		File oneDigitFile = null, twoDigitFile = null, threeDigitFile = null, fourDigitFile = null,
 				fiveDigitFile = null, sixDigitFile = null;
 		try {
-			oneDigitFile = new File("D:\\workspaceKepler\\EmailReader\\src\\oneDigitFile.txt");
-			twoDigitFile = new File("D:\\workspaceKepler\\EmailReader\\src\\twoDigitFile.txt");
-			threeDigitFile = new File("D:\\workspaceKepler\\EmailReader\\src\\threeDigitFile.txt");
-			fourDigitFile = new File("D:\\workspaceKepler\\EmailReader\\src\\fourDigitFile.txt");
-			fiveDigitFile = new File("D:\\workspaceKepler\\EmailReader\\src\\fiveDigitFile.txt");
-			sixDigitFile = new File("D:\\workspaceKepler\\EmailReader\\src\\sixDigitFile.txt");
+			oneDigitFile = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\oneDigitFile.txt");
+			twoDigitFile = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\twoDigitFile.txt");
+			threeDigitFile = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\threeDigitFile.txt");
+			fourDigitFile = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\fourDigitFile.txt");
+			fiveDigitFile = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\fiveDigitFile.txt");
+			sixDigitFile = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\sixDigitFile.txt");
 			// Create the file
 			if (oneDigitFile.createNewFile() || twoDigitFile.createNewFile() || threeDigitFile.createNewFile()
 					|| sixDigitFile.createNewFile() || fiveDigitFile.createNewFile() || oneDigitFile.createNewFile()) {

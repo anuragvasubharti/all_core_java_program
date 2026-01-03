@@ -47,7 +47,7 @@ public class RegexMultipleEmailAddressValidation {
 		 * Validate various email addresses
 		 */
 
-		String inputFileName = "D:\\workspaceKepler\\CoreJavaPoject\\src\\OutputEmail.txt";
+		String inputFileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail.txt";
 		// String inputFileName =
 		// "D:\\workspaceKepler\\EmailReader\\src\\OutputEmail1.txt";
 
@@ -66,7 +66,7 @@ public class RegexMultipleEmailAddressValidation {
 
 			// -------------------------------------------------------------
 
-			String outputFileName = "D:\\workspaceKepler\\CoreJavaPoject\\src\\InputEmail.txt";
+			String outputFileName = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\InputEmail.txt";
 
 			// String outputFileName = "C:\\Users\\Anurag\\Desktop\\New
 			// folder\\1923_Output.txt";

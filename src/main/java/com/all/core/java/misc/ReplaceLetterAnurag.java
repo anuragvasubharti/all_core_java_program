@@ -19,7 +19,7 @@ public class ReplaceLetterAnurag {
 		TreeSet<String> treeSet = new TreeSet<String>();
 		try {
 			// Assume default encoding.
-			FileWriter fileWriter = new FileWriter("D:\\workspaceKepler\\EmailReader\\src\\Replaceletter.txt");
+			FileWriter fileWriter = new FileWriter("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Replaceletter.txt");
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 			for (int i = 0; i < 10000; i++) {
 				int randomInt = random.nextInt(6);
@@ -139,7 +139,7 @@ public class ReplaceLetterAnurag {
 				bufferedWriter.newLine();
 			}
 			bufferedWriter.close();
-			FileReader fileReader = new FileReader("D:\\workspaceKepler\\EmailReader\\src\\ReadLetter.txt");
+			FileReader fileReader = new FileReader("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\ReadLetter.txt");
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String readingLine = "";
 			ArrayList arrayList = new ArrayList();

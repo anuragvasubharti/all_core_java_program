@@ -31,7 +31,7 @@ public class ReplaceLetter {
 			patterns.add(temp);
 		}
 		// ------------------ WRITE TO FILE ------------------
-		String outputFile = "D:\\workspaceKepler\\EmailReader\\src\\Replaceletter.txt";
+		String outputFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\Replaceletter.txt";
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
 			for (String s : patterns) {
 				writer.write(s);
@@ -42,7 +42,7 @@ public class ReplaceLetter {
 			return;
 		}
 		// ------------------ READ + SELENIUM ------------------
-		String inputFile = "D:\\workspaceKepler\\EmailReader\\src\\ReadLetter.txt";
+		String inputFile = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\ReadLetter.txt";
 		System.setProperty("webdriver.chrome.driver", "E:\\JarFile\\chromedriver-win64\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");

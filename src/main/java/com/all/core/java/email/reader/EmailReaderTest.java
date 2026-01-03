@@ -385,7 +385,7 @@ public class EmailReaderTest {
 		
 		try {
 			System.out.println("showUnreadMails");
-			String fileNameOut = "D:\\workspace\\EmailReader\\src\\OutputEmail.txt";
+			String fileNameOut = "E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail.txt";
 			// Assume default encoding.
 			FileWriter fileWriter = new FileWriter(fileNameOut);
 			// Always wrap FileWriter in BufferedWriter.
