@@ -27,7 +27,7 @@ as.string()
                                  |                +---payload (to be encoded in Base64)
                                  +----MIMEText
 */
-package com.all.corejava.email.reader;
+package com.all.core.java.email.reader;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -186,7 +186,7 @@ public class EmailReader_One {
 			// ======================= YAHOO (IMAP) ====================================================
 			// store.connect("imap.mail.yahoo.com", "anuragvasubharti@yahoo.com", "App_Password");
 			
-			 store.connect("imap.mail.yahoo.com", "anuragvasubhartijobs@yahoo.com", "oashhvbkwlrlgjgs");
+			// store.connect("imap.mail.yahoo.com", "anuragvasubhartijobs@yahoo.com", "oashhvbkwlrlgjgs");
 			 
 			// store.connect("imap.mail.yahoo.com", "clouddevopsrecruitment@yahoo.com", "App_Password");
 			
@@ -201,7 +201,7 @@ public class EmailReader_One {
 			// store.connect("imap.gmail.com", "awsengineersakshi@gmail.com", "App_Password");
 			// store.connect("imap.gmail.com", "gcpengineersakshi@gmail.com", "App_Password");
 			 
-			// store.connect("imap.mail.yahoo.com", "sakshivirhajobsearch@yahoo.com", "ttnkefwtiqxrhghq");
+			 store.connect("imap.mail.yahoo.com", "sakshivirhajobsearch@yahoo.com", "ttnkefwtiqxrhghq");
 			 
 			// store.connect("imap-mail.outlook.com", "cloudengineersakshi@outlook.com", "App_Password");
 			// store.connect("imap-mail.outlook.com", "sakshibirha1992@outlook.com", "App_Password");
@@ -237,7 +237,7 @@ public class EmailReader_One {
 			// Folder folderName = store.getFolder("0-NaukriService-2024");
 			// Folder folderName = store.getFolder("0-NaukriService-2025-1");
 			// Folder folderName = store.getFolder("0-NaukriService-2025-2");
-			 Folder folderName = store.getFolder("0-NaukriService-2025-3");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-3");
 			// Folder folderName = store.getFolder("0-NaukriService-2025-4");
 			// Folder folderName = store.getFolder("0-NaukriService-2025-5");
 			// Folder folderName = store.getFolder("0-NaukriService-2025-6");
@@ -355,7 +355,7 @@ public class EmailReader_One {
 			// Folder folderName = store.getFolder("Debarati Ray");
 			// Folder folderName = store.getFolder("Draft");
 			// Folder folderName = store.getFolder("Experience documents");
-			// Folder folderName = store.getFolder("Inbox");
+			 Folder folderName = store.getFolder("Inbox");
 			// Folder folderName = store.getFolder("Laravel Cloud");
 			// Folder folderName = store.getFolder("MySent-2024-1");
 			// Folder folderName = store.getFolder("MySent-2024-2");
@@ -436,7 +436,7 @@ public class EmailReader_One {
 	public static void showAllMails(Folder folderName, int msgStarting) throws FolderClosedException {
 		try {
 			
-			File file = new File("E:\\Project-Sakshi\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program\\OutputEmail.txt");
+			File file = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail.txt");
 
 			// Create the file
 			if (file.createNewFile()) {

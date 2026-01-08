@@ -1,3 +1,22 @@
+// https://www.e-gineering.com/2009/06/25/javamail-and-gmail-simplified-part-3-the-code-logging-in/
+// https://www.programcreek.com/java-api-examples/?api=jakarta.mail.Folder
+// https://www.programcreek.com/java-api-examples/?class=jakarta.mail.BodyPart&method=getContent
+// https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4OvLP2I2xApWgb9JWC41gmNW1K8Mj5aN8RpdpQDBH1c572ksHL_2pr60jO5Y7GpWrlObxng3_GpXgXCFPECHZVT4Risgg
+// https://www.codeproject.com/Articles/5266074/Send-Email-with-Java-and-Yahoo-Mail
+// https://support.google.com/mail/thread/225053229/trying-to-read-new-emails-to-my-gmail-using-imap-from-my-java-client-code?hl=en
+// https://support.google.com/accounts/answer/185833
+// https://mkyong.com/webservices/jax-ws/suncertpathbuilderexception-unable-to-find-valid-certification-path-to-requested-target/
+
+// https://support.google.com/accounts/answer/185833
+// https://myaccount.google.com/u/3/apppasswords?rapt=AEjHL4N0LMktmYm1WW6P8WCsU1TxRwckEtxmO-sR1LEaGuz5oEfhqK55SNTe6T2nm9FXZgDBTR8bG-slo2gWS7AdqGq27HgmBQ
+
+// IMAP host for gmail. -- Sakshi
+// https://www.androidpolice.com/how-to-allow-less-secure-apps-in-gmail/#:~:text=Use%20app%20password%20to%20allow,to%20access%20your%20Google%20Account.
+// https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4PSQu8s10TlJoJSxHHG9FWOm9UTlH1ZReWVe4GryfcKiqT1kQ8gxuTxmQojHygh6ezAP4IfoTFNTbYtC7gCoa4EkryvtiGXwIXfqZwE1mM2Ba-_H1o
+// https://myaccount.google.com/connections?continue=https%3A%2F%2Fmyaccount.google.com%2Fdata-and-privacy%3Fhl%3Den_GB&hl=en_GB
+// https://support.google.com/a/answer/6260879
+// https://workspaceupdates.googleblog.com/2023/09/winding-down-google-sync-and-less-secure-apps-support.html
+
 /*
 as.string()  
  |
@@ -8,8 +27,7 @@ as.string()
                                  |                +---payload (to be encoded in Base64)
                                  +----MIMEText
 */
-
-package com.all.corejava.email.reader;
+package com.all.core.java.email.reader;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -51,7 +69,7 @@ import jakarta.mail.Session;
 import jakarta.mail.Store;
 import jakarta.mail.internet.MimeMultipart;
 
-public class EmailReader_One_Copy {
+public class EmailReader_One {
 
 	private static final Logger logger = Logger.getLogger(EmailReader_One.class.getName());
 	
@@ -75,6 +93,7 @@ public class EmailReader_One_Copy {
 		logger.info("this is a information log message");
 		// logger.warn("this is a warning log message");
 
+		// create properties field
 		Properties gmailProps = new Properties();
 
 		// ---------- IMAP (Read emails) ----------
@@ -94,7 +113,7 @@ public class EmailReader_One_Copy {
 		gmailProps.put("mail.smtp.timeout", "10000");
 
 		// ---------- Debug ----------
-		gmailProps.put("mail.debug", "true");
+		// gmailProps.put("mail.debug", "true");
 
 		Properties yahooProps = new Properties();
 
@@ -116,8 +135,7 @@ public class EmailReader_One_Copy {
 		yahooProps.put("mail.smtp.timeout", "10000");
 
 		// ---------- Debug ----------
-		yahooProps.put("mail.debug", "true");
-
+		// yahooProps.put("mail.debug", "true");
 
 		try {
 
@@ -134,11 +152,63 @@ public class EmailReader_One_Copy {
 			Store store = session.getStore("imaps");
 			System.out.println("Store -----------------------> " + store);
 			System.out.println("");
+			
+			// IMAP host for yahoo. -- Sakshi
+			// store.connect("imap.gmail.com", "sakshivirhajobsearch", "jbalvrfypajbrlzm");
+			// store.connect("imap.mail.yahoo.com", "sakshivirhajobsearch", "ttnkefwtiqxrhghq");
 
-		
-			store.connect("imap.mail.yahoo.com", "sakshivirhajobsearch", "ttnkefwtiqxrhghq");
+			// IMAP host for gmail. -- Anurag
+			// store.connect("imap.gmail.com", "anuragvasubhartijobsearch", "inowyqgipoqgleyv");
+			// store.connect("imap.gmail.com", "anuragvasubharti", "jnjibasgtglbcflv");
+			
+			// store.connect("imap.mail.yahoo.com", "anuragvasubhartijobs", "oashhvbkwlrlgjgs");
+			 
+			// ======================= ANURAG GMAIL (IMAP) ============================================
+			// store.connect("imap.gmail.com", "anuragbhartidating@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "anuragbhartifacebook@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "anuragbhartimatrimony@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "anuragbhartiproperty@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "anuragmarriagesearch@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "anuragmatrimonysearch@gmail.com", "App_Password");
+			 
+			// store.connect("imap.gmail.com", "anuragvasubharti@gmail.com", "jnjibasgtglbcflv");
+			 
+			// store.connect("imap.gmail.com", "anuragvasubhartijobs@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "anuragvasubhartijobsearch@gmail.com", "inowyqgipoqgleyv");
+			// store.connect("imap.gmail.com", "anuragvasubhartilinkedin@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "anuragwebapplication@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "calypsotracking@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "clouddevopsrecruitment@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "myopinionanurag@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "vasuanuragbharti@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "vasubharti@gmail.com", "App_Password");
 
+			// ======================= YAHOO (IMAP) ====================================================
+			// store.connect("imap.mail.yahoo.com", "anuragvasubharti@yahoo.com", "App_Password");
+			
+			// store.connect("imap.mail.yahoo.com", "anuragvasubhartijobs@yahoo.com", "oashhvbkwlrlgjgs");
+			 
+			// store.connect("imap.mail.yahoo.com", "clouddevopsrecruitment@yahoo.com", "App_Password");
+			
+			// ======================= OUTLOOK / HOTMAIL (IMAP) ========================================
+			// store.connect("imap-mail.outlook.com", "anuragvasubharti@hotmail.com", "App_Password");
+			 
+			// *****************************************************************************************
 
+			// ======================= SAKSHI ==========================================================
+			// store.connect("imap.gmail.com", "sakshivirhajobsearch@gmail.com", "jbalvrfypajbrlzm");
+			 
+			// store.connect("imap.gmail.com", "awsengineersakshi@gmail.com", "App_Password");
+			// store.connect("imap.gmail.com", "gcpengineersakshi@gmail.com", "App_Password");
+			 
+			 store.connect("imap.mail.yahoo.com", "sakshivirhajobsearch@yahoo.com", "ttnkefwtiqxrhghq");
+			 
+			// store.connect("imap-mail.outlook.com", "cloudengineersakshi@outlook.com", "App_Password");
+			// store.connect("imap-mail.outlook.com", "sakshibirha1992@outlook.com", "App_Password");
+			// store.connect("imap-mail.outlook.com", "sakshivirha@outlook.com", "App_Password");
+
+			// store.connect("imap-mail.outlook.com", "sakshibirha1992@hotmail.com", "App_Password");
+			// store.connect("imap-mail.outlook.com", "sakshivirha@hotmail.com", "App_Password");
 
 			// -----------------------------------------------------------------------------------------------------
 
@@ -150,7 +220,7 @@ public class EmailReader_One_Copy {
 			Folder[] folders = store.getDefaultFolder().list("*");
 			System.out.println("Folder and Sub Folder Names and inside Mail Counts are");
 			for (Folder folder : folders) {
-				// System.out.println("folder: " + folder);
+				 System.out.println("folder: " + folder);
 				if ((folder.getType() & Folder.READ_WRITE) != 0) {
 					// System.out.println("Folder: " + folder.getFullName().toString().trim() + ": " + folder.getMessageCount());
 				}
@@ -163,8 +233,146 @@ public class EmailReader_One_Copy {
 			// System.out.println("totalMSGCount: " + totalMSGCount);
 			// System.out.println();
 
-			Folder folderName = store.getFolder("0-NaukriService-2025-4");
-			
+			// Yahoo Anurag
+			// Folder folderName = store.getFolder("0-NaukriService-2024");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-1");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-2");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-3");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-4");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-5");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-6");
+			// Folder folderName = store.getFolder("18-0000-0400");
+			// Folder folderName = store.getFolder("18-0401-0800");
+			// Folder folderName = store.getFolder("18-0801-1200");
+			// Folder folderName = store.getFolder("19-0000-0400");
+			// Folder folderName = store.getFolder("19-0401-0800");
+			// Folder folderName = store.getFolder("19-0801-1200");
+			// Folder folderName = store.getFolder("19-1201-1600");
+			// Folder folderName = store.getFolder("19-1601-2000");
+			// Folder folderName = store.getFolder("19-2001-2400");
+			// Folder folderName = store.getFolder("19-2401-2800");
+			// Folder folderName = store.getFolder("19-2801-3200");
+			// Folder folderName = store.getFolder("20-0000-0400");
+			// Folder folderName = store.getFolder("20-0401-0800");
+			// Folder folderName = store.getFolder("20-0801-1200");
+			// Folder folderName = store.getFolder("20-1201-1600");
+			// Folder folderName = store.getFolder("20-1601-2000");
+			// Folder folderName = store.getFolder("20-2001-2400");
+			// Folder folderName = store.getFolder("20-2401-2800");
+			// Folder folderName = store.getFolder("20-2801-3200");
+			// Folder folderName = store.getFolder("20-3201-3600");
+			// Folder folderName = store.getFolder("2014");
+			// Folder folderName = store.getFolder("2015");
+			// Folder folderName = store.getFolder("2016");
+			// Folder folderName = store.getFolder("21-0000-0400");
+			// Folder folderName = store.getFolder("21-0401-0800");
+			// Folder folderName = store.getFolder("21-0801-1200");
+			// Folder folderName = store.getFolder("22-0000-0400");
+			// Folder folderName = store.getFolder("22-0401-0800");
+			// Folder folderName = store.getFolder("22-0801-1200");
+			// Folder folderName = store.getFolder("23-0000-0400");
+			// Folder folderName = store.getFolder("23-0401-0800");
+			// Folder folderName = store.getFolder("24-0000-0400");
+			// Folder folderName = store.getFolder("25-0000-0400");
+			// Folder folderName = store.getFolder("Admin");
+			// Folder folderName = store.getFolder("Anurag");
+			// Folder folderName = store.getFolder("Archive");
+			// Folder folderName = store.getFolder("Bulk");
+			// Folder folderName = store.getFolder("Deepak Sati");
+			// Folder folderName = store.getFolder("Draft");
+			// Folder folderName = store.getFolder("Gemsource");
+			// Folder folderName = store.getFolder("Gmail-1");
+			// Folder folderName = store.getFolder("Gmail-2");
+			// Folder folderName = store.getFolder("HCL");
+			// Folder folderName = store.getFolder("HSBC");
+			// Folder folderName = store.getFolder("IMPSent-2014");
+			// Folder folderName = store.getFolder("IMPSent-2015");
+			// Folder folderName = store.getFolder("IMPSent-2016");
+			// Folder folderName = store.getFolder("IMPSent-2017");
+			// Folder folderName = store.getFolder("IMPSent-2018");
+			// Folder folderName = store.getFolder("IMPSent-2019");
+			// Folder folderName = store.getFolder("IMPSent-2020");
+			// Folder folderName = store.getFolder("IMPSent-2021");
+			// Folder folderName = store.getFolder("IMPSent-2022");
+			// Folder folderName = store.getFolder("IMPSent-2023");
+			// Folder folderName = store.getFolder("Inbox");
+			// Folder folderName = store.getFolder("Infosys");
+			// Folder folderName = store.getFolder("Kumar Das");
+			// Folder folderName = store.getFolder("MySent-2015");
+			// Folder folderName = store.getFolder("MySent-2016");
+			// Folder folderName = store.getFolder("MySent-2018");
+			// Folder folderName = store.getFolder("MySent-2019");
+			// Folder folderName = store.getFolder("MySent-2020");
+			// Folder folderName = store.getFolder("MySent-2021");
+			// Folder folderName = store.getFolder("MySent-2022");
+			// Folder folderName = store.getFolder("MySent-2024");
+			// Folder folderName = store.getFolder("Naukri.comJobs");
+			// Folder folderName = store.getFolder("Re-Reply");
+			// Folder folderName = store.getFolder("Sakshi");
+			// Folder folderName = store.getFolder("Sanaari");
+			// Folder folderName = store.getFolder("Sent");
+			// Folder folderName = store.getFolder("Synechron");
+			// Folder folderName = store.getFolder("Syntel");
+			// Folder folderName = store.getFolder("TCS");
+			// Folder folderName = store.getFolder("TIAA");
+			// Folder folderName = store.getFolder("Team Unstop");
+			// Folder folderName = store.getFolder("TechMahindra");
+			// Folder folderName = store.getFolder("Teliolabs");
+			// Folder folderName = store.getFolder("Temp-1");
+			// Folder folderName = store.getFolder("Temp-2");
+			// Folder folderName = store.getFolder("Temp-3");
+			// Folder folderName = store.getFolder("Temp-4");
+			// Folder folderName = store.getFolder("Temp-5");
+			// Folder folderName = store.getFolder("Trash");
+			// Folder folderName = store.getFolder("Volante");
+			// Folder folderName = store.getFolder("Wipro");
+			// Folder folderName = store.getFolder("me");
+
+			// -----------------------------------------------------------------------------------------------------
+
+			// Yahoo Sakshi
+			// Folder folderName = store.getFolder("0-Edureka");
+			// Folder folderName = store.getFolder("0-Edureka/AWS");
+			// Folder folderName = store.getFolder("0-Edureka/Azure");
+			// Folder folderName = store.getFolder("0-Edureka/DevOps");
+			// Folder folderName = store.getFolder("0-Edureka/GCP");
+			// Folder folderName = store.getFolder("0-Edureka/Java");
+			// Folder folderName = store.getFolder("0-Edureka/Python");
+			// Folder folderName = store.getFolder("0-NaukriService-2024-1");
+			// Folder folderName = store.getFolder("0-NaukriService-2024-2");
+			// Folder folderName = store.getFolder("0-NaukriService-2024-3");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-1");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-2");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-3");
+			// Folder folderName = store.getFolder("0-NaukriService-2025-4");
+			// Folder folderName = store.getFolder("2022");
+			// Folder folderName = store.getFolder("2023");
+			// Folder folderName = store.getFolder("2024");
+			// Folder folderName = store.getFolder("2025");
+			// Folder folderName = store.getFolder("Archive");
+			// Folder folderName = store.getFolder("Bulk");
+			// Folder folderName = store.getFolder("Chumbak");
+			// Folder folderName = store.getFolder("Debarati Ray");
+			// Folder folderName = store.getFolder("Draft");
+			// Folder folderName = store.getFolder("Experience documents");
+			 Folder folderName = store.getFolder("Inbox");
+			// Folder folderName = store.getFolder("Laravel Cloud");
+			// Folder folderName = store.getFolder("MySent-2024-1");
+			// Folder folderName = store.getFolder("MySent-2024-2");
+			// Folder folderName = store.getFolder("MySent-2024-3");
+			// Folder folderName = store.getFolder("Render");
+			// Folder folderName = store.getFolder("Sent");
+			// Folder folderName = store.getFolder("Temp-1");
+			// Folder folderName = store.getFolder("Temp-2");
+			// Folder folderName = store.getFolder("Trash");
+			// Folder folderName = store.getFolder("admin@corp2corpstaffinghub.com");
+			// Folder folderName = store.getFolder("block");
+			// Folder folderName = store.getFolder("github-pipeline");
+			// Folder folderName = store.getFolder("gitlab-pipeline");
+			// Folder folderName = store.getFolder("hackerearth");
+			// Folder folderName = store.getFolder("indeed");
+			// Folder folderName = store.getFolder("me");
+
 			// System.out.println("");
 			System.out.println("Extracting Folder Name is ---> " + folderName);
 			System.out.println("");
@@ -227,8 +435,8 @@ public class EmailReader_One_Copy {
 
 	public static void showAllMails(Folder folderName, int msgStarting) throws FolderClosedException {
 		try {
-			// File file = new File("F:\\eclipse-workspace-oxygen-3a\\CoreJavaProject\\src\\core\\java\\email-" + msgStarting + ".txt");
-			File file = new File("E:\\Project-Sakshi\\all_corejava_program\\src\\main\\java\\com\\all\\corejava\\program\\OutputEmail.txt");
+			
+			File file = new File("E:\\Project-Anurag\\all_core_java_program\\src\\main\\java\\com\\all\\core\\java\\input_output\\OutputEmail.txt");
 
 			// Create the file
 			if (file.createNewFile()) {
@@ -373,6 +581,7 @@ public class EmailReader_One_Copy {
 								strFailEMailID2 = strFailEMailID2.replace(".comLearn", ".com");
 								strFailEMailID2 = strFailEMailID2.replace("id%3", "");
 								strFailEMailID2 = strFailEMailID2.replace(".in)", ".in");
+								strFailEMailID2 = strFailEMailID2.replace(".compassword)", ".com");
 
 								if (strFailEMailID2.contains("@")) {
 									if (!StringUtils.containsIgnoreCase(strFailEMailID2, "@atos.net")
